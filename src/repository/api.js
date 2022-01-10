@@ -1,7 +1,7 @@
 export class APIRepository {
 
     constructor(){
-        this.baseURL = 'http://localhost:3001'
+        this.baseURL = 'https://dept-api.lymne.com'
     }
 
     async popularMovieFetcher() {
