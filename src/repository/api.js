@@ -1,26 +1,24 @@
+import { BASE_URL } from "./constants";
+
 export class APIRepository {
 
-    constructor(){
-        this.baseURL = 'https://dept-api.lymne.com'
-    }
-
     async popularMovieFetcher() {
-        const apiResponse = await fetch(`${this.baseURL}/trailers/popular`);
+        const apiResponse = await fetch(`${BASE_URL}/trailers/popular`);
         return await apiResponse.json()
     }
 
     async movieSearchFetcher(search) {
-        const apiResponse = await fetch(`${this.baseURL}/trailers/search?q=${search}`);
+        const apiResponse = await fetch(`${BASE_URL}/trailers/search?q=${search}`);
         return await apiResponse.json()
     }
 
     async movieInfoFetcher(id) {
-        const apiResponse = await fetch(`${this.baseURL}/trailers/${id}/info/`);
+        const apiResponse = await fetch(`${BASE_URL}/trailers/${id}/info/`);
         return await apiResponse.json()
     }
     
     async movieTrailerFetcher(id) {
-        const apiResponse = await fetch(`${this.baseURL}/trailers/${id}/trailer/`);
+        const apiResponse = await fetch(`${BASE_URL}/trailers/${id}/trailer/`);
         return await apiResponse.json()
     }
 }
