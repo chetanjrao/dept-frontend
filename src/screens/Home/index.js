@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import Hero from "./Hero";
 import Selection from "./Selection";
 import Popular from "./Popular";
-import { fetchPopularMovies, POPULAR_LOADING } from "../../redux/home/actions/actions";
+import { POPULAR_LOADING } from "../../redux/home/actions/actions";
 import { connect, useDispatch } from "react-redux";
 
 const Home = (props) => {
