@@ -1,0 +1,232 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+
+.container
+    +x
+        display: block
+
+.stage
+    +body-bold-1
+    color: $neutrals4
+
+.substage
+    font-size: 36px
+    font-weight: bold
+    margin-bottom: 36px
+
+.head
+    max-width: 600px
+    margin: 54px auto
+    text-align: center
+    +x
+        margin-bottom: 112px
+    +m
+        margin-bottom: 64px
+
+.stage
+    margin-bottom: 8px
+    +hairline-2
+    color: $neutrals4
+
+.title
+    margin-top: 8px
+    margin-bottom: 24px
+    +m
+        font-size: 32px
+
+.row
+    display: flex
+    justify-content: center
+    align-items: center;
+    flex-grow: 1
+    +x
+        margin-right: 0
+        padding: 0
+        border: none
+
+.sidebar
+    flex-shrink: 0
+    width: 224px
+    +x
+        width: 100%
+        margin-top: 64px
+    +m
+        margin-top: 40px
+        padding-top: 40px
+        border-top: 1px solid $neutrals6
+        +dark
+            border-color: $neutrals3
+    .button
+        margin-top: 8px
+        +x
+            display: none
+
+.card,
+.item
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+    &:hover
+        .preview
+            &:before
+                opacity: 1
+                visibility: visible
+
+.card
+    .preview
+        margin-bottom: 24px
+    .avatar
+        width: 48px
+        height: 48px
+        margin-right: 16px
+    .title
+        +body-bold-1
+        +m
+            font-size: 16px
+    .content
+        margin-top: 8px
+
+
+.box
+    margin-left: auto
+    padding-left: 20px
+    text-align: right
+
+.avatar
+    flex-shrink: 0
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        object-fit: cover 
+
+
+.content
+    +caption-2
+    margin-top: 8px
+    color: $neutrals4
+
+.imDbRating
+    display: inline-block
+    padding: 7px
+    box-shadow: inset 0 0 0 2px $green
+    border-radius: 4px
+    +hairline-2
+    color: $green
+
+.col
+    width: 40%
+
+.item
+    display: flex
+    flex-direction: column
+    text-align: center
+    height: 340px;
+    align-items: center
+    justify-content: space-between
+    .preview
+        flex-shrink: 0
+        width: 160px;
+    .avatar
+        width: 24px
+        height: 24px
+        margin-right: 12px
+    .title
+        margin-bottom: 8px
+        +body-bold-2
+    .line
+        margin-bottom: 16px
+    .button
+        padding: 0 12px
+        height: 32px
+    &:not(:last-child)
+        margin-bottom: 30px
+    
+.info
+    +caption-bold-2
+    color: $neutrals4
+    +x
+        margin-bottom: 24px
+    +t
+        margin-bottom: 20px
+
+.list
+    +x
+        display: flex
+        margin: 0 -12px
+    +t
+        margin: 0 -40px
+        padding-top: 4px
+        overflow: auto
+        overflow-x: auto 
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none 
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 40px
+            height: 1px
+
+.user
+    display: flex
+    align-items: center
+    padding: 24px 0
+    +x
+        flex: 0 0 calc(25% - 24px)
+        width: calc(25% - 24px)
+        margin: 0 12px
+        padding: 0
+    +t
+        flex: 0 0 224px
+        width: 224px
+        margin: 0
+        padding-right: 16px
+    .avatar
+        position: relative
+        width: 56px
+        height: 56px
+        margin-right: 16px
+    &:not(:last-child)
+        border-bottom: 1px solid $neutrals6
+        +x
+            border: none
+        +dark
+            border-color: $neutrals3
+
+.number
+    position: absolute
+    top: -4px
+    left: -4px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    border: 2px solid $neutrals8
+    background: $neutrals2
+    +caption-bold-2
+    color: $neutrals8
+    +dark
+        border-color: $neutrals1
+        background: $neutrals8
+        color: $neutrals2
+
+.name
+    margin-bottom: 2px
+    font-weight: 500
+
+.money
+    +caption-2
+    color: $neutrals4
+    span
+        font-weight: 600
+        color: $neutrals2
+        +dark
+            color: $neutrals6
